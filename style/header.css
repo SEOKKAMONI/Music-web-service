@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.header__line {
+    height: 3vh;
+    min-width: 100vh;
+    background-color: #2667ff;
+}
+
+.header_sub_line {
+    justify-content:space-around;
+    display: flex;
+    align-items: center;
+    padding: 28px;
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
