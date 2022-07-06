@@ -21,7 +21,7 @@
                 <form id="sub__form">
                     <input type="input" id="sub__input" name="q" placeholder="아티스트 및 앨범을 검색하세요."
                         aria-label="Search through site content">
-                    <button onclick="addMusicList()" type="button" id="sub_search__btn"><svg class="search__emoji" viewBox="0 0 1024 1024">
+                    <button type="button" id="sub_search__btn"><svg class="search__emoji" viewBox="0 0 1024 1024">
                             <path class="path1"
                                 d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
                             </path>
@@ -33,7 +33,7 @@
             <form id="__form">
                 <input type="input" id="__input" name="q" placeholder="아티스트 및 앨범을 검색하세요."
                     aria-label="Search through site content">
-                <button type="button" id="search__btn"><svg class="search__emoji" viewBox="0 0 1024 1024">
+                <button onclick="addMusicList()" type="button" id="search__btn"><svg class="search__emoji" viewBox="0 0 1024 1024">
                         <path class="path1"
                             d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
                         </path>
@@ -58,36 +58,26 @@
                     <div class="__artist">
                         <div class="artist_cover">
                             <img class="artist_img"
-                                src="https://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/067/872/918/67872918_1588900211036_19_600x600.JPG">
+                                src="./img/noPerson.png">
                         </div>
                         <div class="artist_information">
-                            <h1>아이유(IU)</h1>
+                            <h1 class="artist_name">정보가 없습니다</h1>
                             <ul class="artist_items">
                                 <li>
-                                    <span>생년월일: </span>
-                                    <span></span>
-                                </li>
-                                <li>
-                                    <span>출생지: </span>
-                                    <span>1993. 5. 16.</span>
-                                </li>
-                                <li>
                                     <span>데뷔날짜: </span>
-                                    <span> 2008년 / 미아</span>
+                                    <span class="published">정보가 없습니다</span>
                                 </li>
-                                <li>
-                                    <span>국적: </span>
-                                    <span>한국</span>
+                                <li id="detail_area">
+                                    
                                 </li>
-                                
                             </ul>
                         </div>
                     </div>
-                    
-                    <div class="musicList">
-
-                    </div>
-
+                </div>
+                <div class="musicList">
+                    <ul class="albumList">
+                        <li></li>
+                    </ul>
                 </div>
             </div>
 
