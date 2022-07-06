@@ -17,7 +17,7 @@
     justify-content:space-around;
     display: flex;
     align-items: center;
-    padding: 28px;
+    padding: 20px;
     border-bottom: 2px solid black;
     margin-bottom: 30px;
 }
@@ -25,5 +25,7 @@
 .logo {
     font-size: 24px;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 
