@@ -1,5 +1,5 @@
 #result_page {
-    /* display: none; */
+    display: none;
     position: relative;
     top: 70px;
     min-height: 100vh;
