@@ -9,6 +9,9 @@
 <h3>💙 현재 레이아웃 💙</h3>
 <img src="https://media.discordapp.net/attachments/994402201768300587/994429963421880370/unknown.png?width=1356&height=670">
 <hr>
+<h3>💙 검색시 결과 💙 (미완성)</h3>
+<img src="https://media.discordapp.net/attachments/994402201768300587/994530049938173994/unknown.png?width=1359&height=670">
+<hr>
 <h3>💙 구현 계획 💙</h3>
 <h2>1. last.fm API를 사용하여 검색시 아티스트 정보와 앨범, 노래 따오기 <span style="font-weight: bold;">(일정 부분 완료)</span></h2>
 <h3> 🔴 문제점: last.fm API에서 아티스트에 이미지와 앨범 커버 이미지를 규정위반에 의해 지원을 안함<br>
