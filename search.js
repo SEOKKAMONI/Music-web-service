@@ -6,6 +6,7 @@ const mainPg = document.querySelector(".main_pg");
 const resultPg = document.getElementById("result_page");
 const serachArea = document.querySelector(".search")
 
+
 mainForm.addEventListener("submit", addMusicList);
 
 // 앨범, 음악 정보
@@ -15,21 +16,34 @@ function addMusicList(e) {
   $.ajax({
     type: 'GET',
     url: 'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + musicKeyWorld + '&api_key=502aca31cb330e8135b04d480caf6a56&format=json',
-    success: function (response) {
+  })
+    .done(function (response) {
       artistInformaition(musicKeyWorld);
       mainPg.style.display = "none"; // 검색이 되면 메인페이지를 가리고
       resultPg.style.display = "block"; // 검색 결과를 보여준다
       serachArea.style.display = "none"; // 검색창을 가려준다
 
-
       let musicList = response["results"]["trackmatches"]["track"];
-      for (let i = 0; i < musicList.length; i++) {
+
+
+      let count = 1;
+      for (let i = 0; i < 13; i++) {
         let albumTitle = musicList[i]["name"];
-        let albumArtist = musicList[i]["artist"];
+        let albumURL = musicList[i]["url"];
+        let albumLikes = musicList[i]["listeners"];
+
+        $(".musicList").append(`
+        <li class="list">
+          <span class="number">${i + 1}.</span>
+          <a class="musicName" href="${albumURL}">${albumTitle}</a>
+          <span class="likers"><span class="like">${albumLikes}</span> ❤</span>
+        </li>
+        `);
+        
+
       }
       mainInput.value = " "; // 검색창 지워주기
-    }
-  })
+    });
 }
 
 
@@ -44,10 +58,10 @@ const detailArea = document.getElementById("datail_area"); // 자세히보기 �
 function artistInformaition(musicKeyWorld) {
   $.ajax({
     type: 'GET',
-    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + musicKeyWorld + '&api_key=502aca31cb330e8135b04d480caf6a56&format=json',
-    success: function (response) {
+    url: 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=' + musicKeyWorld + '&api_key=502aca31cb330e8135b04d480caf6a56&format=json'
+  })
+    .done(function (response) {
       let artist_publish = response["artist"]["bio"]["published"]; // 데뷔날짜
-      let artist_content = response["artist"]["bio"]["content"]; // 설명
       let artist_name = response["artist"]["name"]; // 이름
       let detail_url = response["artist"]["url"]; // url
 
@@ -59,8 +73,7 @@ function artistInformaition(musicKeyWorld) {
 
       artistName.innerText = artist_name;
       artistPublished.innerText = artist_publish;
-
-
-    }
-  })
+    });
 }
+
+

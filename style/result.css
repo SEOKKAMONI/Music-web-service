@@ -1,5 +1,5 @@
 #result_page {
-    display: none;
+    /* display: none; */
     position: relative;
     top: 70px;
     min-height: 100vh;
@@ -52,8 +52,20 @@
     list-style: none;
 }
 
+.more_btn {
+    text-decoration: none !important;
+    position: relative;
+    top: 20px;
+    color: #fff;
+    background-color: #3590f3;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 6px;
+}
 
-.musicList {
+/* playlist 부분 */
+
+.musicContent {
     border-radius: 10px;
     margin: 0 auto;
     width: 100%;
@@ -66,17 +78,46 @@
     padding: 8px;
 }
 
-.albumList li {
-    list-style: none;
+.musicList {
+    border: 1px solid black;
+    width: 670px;
+    height: 95%;
+    float: left;
+    padding: 16px;
 }
 
-.more_btn {
-    text-decoration: none !important;
+.list {
+    list-style: none;
+    border: 2px solid #3590f3;
+    padding: 4px;
+    margin-bottom: 4px;
+    min-width: 80vh;
+}
+
+.musicName {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.musicName:hover {
+    border-bottom: 1.8px solid black;
+}
+
+.likers {
+    float: right;
+}
+
+#load {
+    display: block;
     position: relative;
-    top: 20px;
-    color: #fff;
-    background-color: #3590f3;
+    bottom: -550px;
+    text-align: center;
+    text-decoration: none;
     border: 1px solid #d9d9d9;
     border-radius: 8px;
-    padding: 6px;
+    background-color: #3590f3;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
 }
