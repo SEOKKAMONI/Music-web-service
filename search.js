@@ -1,5 +1,3 @@
-// 내일 해야할것 중복검색시 중복되는 UI/UX
-
 // http://ws.audioscrobbler.com/2.0/?method=track.search&track=아이유&api_key=502aca31cb330e8135b04d480caf6a56&format=json
 const mainInput = document.getElementById("__input"); // main input
 const mainForm = document.getElementById("__form"); // main form
@@ -11,23 +9,32 @@ const serachArea = document.querySelector(".search");
 const subForm = document.getElementById("sub__form"); // 서브 form
 const subInput = document.getElementById("sub__input"); // 서브 input
 
+const searchBtn = document.getElementById("search__btn"); // 메인 검색창 버튼
+const subSearchBtn = document.getElementById("sub_search__btn"); // 서브 검색창 버튼
+
 
 mainForm.addEventListener("submit", inputMain);
 subForm.addEventListener("submit", inputSub);
 
-function inputMain(e) {
+searchBtn.addEventListener("click", inputMain);
+subSearchBtn.addEventListener("click", inputSub);
+
+function inputMain(e) { // 메인 검색창
   let musicKeyWorld = mainInput.value;
   addMusicList(e, musicKeyWorld);
 }
 
-function inputSub(e) {
+function inputSub(e) { // 서브 검색창
   let musicKeyWorld = subInput.value;
+  $(".list").remove(); // list 중복 생성 방지
+
   addMusicList(e, musicKeyWorld);
 }
 
 // 앨범, 음악 정보
 function addMusicList(e, musicKeyWorld) {
   e.preventDefault()
+  musicKeyWorld = musicKeyWorld.replace(" ", "");
   $.ajax({
     type: 'GET',
     url: 'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + musicKeyWorld + '&api_key=502aca31cb330e8135b04d480caf6a56&format=json',
@@ -40,7 +47,7 @@ function addMusicList(e, musicKeyWorld) {
       let musicList = response["results"]["trackmatches"]["track"];
 
       // 검색결과가 없을때
-      if(musicList.length == 0) {
+      if (musicList.length == 0) {
         let searchResult = document.querySelector(".searchResult"); // 검색결과
         let errorArea = document.querySelector(".errorArea");
         errorArea.style.display = "block";
@@ -51,22 +58,24 @@ function addMusicList(e, musicKeyWorld) {
       }
       subInput.value = "";
       mainInput.value = "";
-      
+
 
       let count = 1;
-      for (let i = 0; i < 13; i++) {
+      for (let i = 0; i < 12; i++) {
         let albumTitle = musicList[i]["name"];
         let albumURL = musicList[i]["url"];
         let albumLikes = musicList[i]["listeners"];
 
         $(".musicList").append(`
         <li class="list">
-          <span class="number">${i + 1}.</span>
-          <a class="musicName" href="${albumURL}">${albumTitle}</a>
+          <div class="numberANDtitle">
+              <span class="number">${i + 1}.</span>
+              <a class="musicName" target="_blank" href="${albumURL}"><span class="albumTitle">${albumTitle}</span></a>
+          </div>
           <span class="likers"><span class="like">${albumLikes}</span> ❤</span>
         </li>
         `);
-        
+
 
       }
     });
@@ -91,13 +100,8 @@ function artistInformaition(musicKeyWorld) {
       let artist_name = response["artist"]["name"]; // 이름
       let detail_url = response["artist"]["url"]; // url
 
-      console.log(detail_url, artist_publish)
+      $(".more_btn").attr("href", detail_url); // URL 버튼 href 바꿔주기
 
-      $("<a>").attr({ // 자세히보기 버튼 생성후 추가
-        value: "자세히 보기",
-        href: detail_url,
-        class: "more_btn",
-      }).appendTo($("#detail_area")).text("자세히 보기");
 
       artistPublished.innerText = artist_publish;
     });

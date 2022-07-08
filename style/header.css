@@ -3,13 +3,9 @@
     padding: 0;
 }
 
-.container {
-    min-height: 100vh;
-}
-
 .header__line {
     height: 3vh;
-    min-width: 100vh;
+    max-width: 1000vh;
     background-color: #2667ff;
 }
 
@@ -20,6 +16,7 @@
     padding: 20px;
     border-bottom: 2px solid black;
     margin-bottom: 30px;
+    max-width: 100%;
 }
 
 .logo {

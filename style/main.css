@@ -1,3 +1,6 @@
+.container {
+}
+
 .main_pg {
     position: relative;
     top: 70px;
@@ -28,3 +31,31 @@
     height: 250px;
     box-shadow: 0.3px 0.3px 0.3px -1px;
 }
+
+.front_chart {
+    border: 3px solid #065fbe;
+    width: 400px;
+    height: 95%;
+    padding: 4px;
+}
+
+.front_chart li {
+    list-style: none;
+    border: 1px solid black;
+}
+
+.chartList {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.charNumberTitle {
+    display: flex;
+}
+
+.musicTitleChart {
+    margin-left: 10px;
+}
+

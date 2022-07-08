@@ -3,22 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>SIMSIMHYE</title>
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/search.css">
     <link rel="stylesheet" href="./style/sub_search.css">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/result.css">
-    <link rel="stylesheet" href="./style/searchError.css">k
+    <link rel="stylesheet" href="./style/searchError.css">
 </head>
 
 <body>
     <div class="container">
+        <!-- 헤더 부분 -->
         <div class="header__line"></div>
         <div class="header_sub_line">
             <a href="#" class="logo" onclick="window.location.reload()">INCHEON CHANNEL</a>
             <div>
+                <!-- 서브 검색창 -->
                 <form id="sub__form">
                     <input type="input" id="sub__input" name="q" placeholder="아티스트 및 앨범을 검색하세요."
                         aria-label="Search through site content">
@@ -31,10 +33,12 @@
             </div>
         </div>
         <div class="search">
+            <!-- 메인 검색창 -->
             <form id="__form">
                 <input type="input" id="__input" name="q" placeholder="아티스트 및 앨범을 검색하세요."
                     aria-label="Search through site content">
-                <button onclick="addMusicList()" type="button" id="search__btn"><svg class="search__emoji" viewBox="0 0 1024 1024">
+                <button type="button" id="search__btn"><svg class="search__emoji"
+                        viewBox="0 0 1024 1024">
                         <path class="path1"
                             d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
                         </path>
@@ -46,7 +50,35 @@
             <!-- 처음 시작 페이지 -->
             <div class="main_pg">
                 <div class="front__content">
-
+                    <ul class="front_chart">
+                        <li class="chartList">
+                            <div class="charNumberTitle">
+                                <span class="chart_number">1.</span>
+                                <span class="musicTitleChart">좋은날</span>
+                            </div>
+                            <div class="chartArtistArea">
+                                <span class="chartArtist">아이유</span>
+                            </div>
+                        </li>
+                        <li class="chartList">
+                            <div class="charNumberTitle">
+                                <span class="chart_number">1.</span>
+                                <span class="musicTitleChart">좋은날</span>
+                            </div>
+                            <div class="chartArtistArea">
+                                <span class="chartArtist">아이유</span>
+                            </div>
+                        </li>
+                        <li class="chartList">
+                            <div class="charNumberTitle">
+                                <span class="chart_number">1.</span>
+                                <span class="musicTitleChart">좋은날</span>
+                            </div>
+                            <div class="chartArtistArea">
+                                <span class="chartArtist">아이유</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="front_sub_content">
 
@@ -58,30 +90,39 @@
                 <div class="result_content">
                     <div class="__artist">
                         <div class="artist_cover">
-                            <img class="artist_img"
-                                src="./img/noPerson.png">
+                            <img class="artist_img" src="./img/noPerson.png">
                         </div>
+
+
+                        <!-- 검색시 아티스트 정보 -->
                         <div class="artist_information">
-                            <h1 class="artist_name">정보가 없습니다</h1>
+                            <h1 class="artist_name">
+                                <!-- 이름 부분 -->
+                            </h1>
                             <ul class="artist_items">
                                 <li>
                                     <span>데뷔날짜: </span>
-                                    <span class="published">정보가 없습니다</span>
+                                    <span class="published">
+                                        <!-- 데뷔 날짜 부분 -->
+                                    </span>
                                 </li>
                                 <li id="detail_area">
-                                    
+                                    <a href="#" target="_blank" class="more_btn">자세히 보기</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
+                <!-- 검색시 뮤직 리스트 생성 -->
                 <div class="musicContent">
                     <ul class="musicList">
                         <a href="#" id="load">더 보기</a>
                     </ul>
                 </div>
             </div>
+
+            <!-- 검색결과가 없을때 -->
             <div class="errorArea">
                 <div id="searchErrorPg">
                     <h2>"<span class="searchResult"></span>" 에 대한 검색 결과가 없습니다.</h2>
@@ -89,7 +130,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./app/search.js"></script>
