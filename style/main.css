@@ -1,7 +1,14 @@
-.container {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1000px;
 }
 
 .main_pg {
+    display: none;
     position: relative;
     top: 70px;
     min-height: 100vh;
@@ -14,7 +21,7 @@
     border-radius: 10px;
     margin: 0 auto;
     height: 350px;
-    width: 100%;
+    width: 900px;
     background-color: #f8f7ff;
     top: 50px;
     box-shadow: 0.3px 0.3px 0.3px -1px;
@@ -27,7 +34,7 @@
     border: 3px solid #3590f3;
     background-color: #f8f7ff;
     border-radius: 10px;
-    width: 100%;
+    width: 900px;
     height: 250px;
     box-shadow: 0.3px 0.3px 0.3px -1px;
 }
@@ -59,3 +66,8 @@
     margin-left: 10px;
 }
 
+@media (max-width: 1000px) {
+    body {
+        width: 1000px;
+    }
+}

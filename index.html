@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/result.css">
     <link rel="stylesheet" href="./style/searchError.css">
+    <link rel="stylesheet" href="./style/pagenation.css">
 </head>
 
 <body>
@@ -37,8 +38,7 @@
             <form id="__form">
                 <input type="input" id="__input" name="q" placeholder="아티스트 및 앨범을 검색하세요."
                     aria-label="Search through site content">
-                <button type="button" id="search__btn"><svg class="search__emoji"
-                        viewBox="0 0 1024 1024">
+                <button type="button" id="search__btn"><svg class="search__emoji" viewBox="0 0 1024 1024">
                         <path class="path1"
                             d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
                         </path>
@@ -113,13 +113,19 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 검색시 뮤직 리스트 생성 -->
                 <div class="musicContent">
                     <ul class="musicList">
-                        <a href="#" id="load">더 보기</a>
                     </ul>
                 </div>
+                <!-- 페이지 네이션 부분 -->
+                <ul class="pagination">
+                    <a class="beforeBtn" onclick="" href="#">이전</a>
+                    <span class="pages">
+                        
+                    </span>
+                    <a class="nextBtn" onclick="" href="#">다음</a>
+                </ul>
             </div>
 
             <!-- 검색결과가 없을때 -->

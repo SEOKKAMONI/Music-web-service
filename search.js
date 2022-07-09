@@ -45,6 +45,7 @@ function addMusicList(e, musicKeyWorld) {
       serachArea.style.display = "none"; // 검색창을 가려준다
 
       let musicList = response["results"]["trackmatches"]["track"];
+      pageNation(musicList); // 페이지 수 판단
 
       // 검색결과가 없을때
       if (musicList.length == 0) {
@@ -61,7 +62,7 @@ function addMusicList(e, musicKeyWorld) {
 
 
       let count = 1;
-      for (let i = 0; i < 12; i++) {
+      for (let i = 0; i < 10; i++) {
         let albumTitle = musicList[i]["name"];
         let albumURL = musicList[i]["url"];
         let albumLikes = musicList[i]["listeners"];
@@ -105,6 +106,26 @@ function artistInformaition(musicKeyWorld) {
 
       artistPublished.innerText = artist_publish;
     });
+}
+
+
+// 페이지 네이션
+
+function pageNation(musicList) {
+  const pageNation = document.querySelector(".pagination"); // pagenation
+  totalMusic = musicList.length;
+
+  if(totalMusic <= 10) { // 총 음악의 수가 10개를 안넘으면 숨기기
+    pageNation.style.display = "none";
+  }
+  
+  let totalPage = Math.ceil(totalMusic / 10); // 몇페이지를 출력해야하는지
+  
+  for (i = 1; i <= totalPage; i++) {
+    $(".pages").append(`
+    <a href="#">${i}</a>
+    `)
+  }
 }
 
 
