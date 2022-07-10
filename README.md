@@ -6,10 +6,16 @@
     MusicBrainz API : https://musicbrainz.org/doc/MusicBrainz_API<br>
     Genius API : https://genius.com/developers</h4>
 <hr>
+<h3>💙 수정전 레이아웃 💙</h3>
+<img src="https://media.discordapp.net/attachments/994402201768300587/994429963421880370/unknown.png?width=829&height=409">
+
 <h3>💙 현재 레이아웃 💙 (수정 07.10)</h3>
 <img src="https://media.discordapp.net/attachments/994402201768300587/995681207046111353/unknown.png"?width=828&height=410?width=1356&height=670">
 
 <hr>
+<h3>💙 수정전 검색시 결과 💙</h3>
+<img src="https://media.discordapp.net/attachments/994402201768300587/994530049938173994/unknown.png?width=831&height=410">
+
 <h3>💙 검색시 결과 💙 (수정 07.10)</h3>
 <img src="https://media.discordapp.net/attachments/994402201768300587/995682793155727430/unknown.png?width=825&height=409"?width=1359&height=670">
 <hr>
