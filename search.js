@@ -19,6 +19,9 @@ subForm.addEventListener("submit", inputSub);
 searchBtn.addEventListener("click", inputMain);
 subSearchBtn.addEventListener("click", inputSub);
 
+chartTopArtist() // 아티스트 차트
+chartTopTrack() // 트랙 차트
+
 function inputMain(e) { // 메인 검색창
   let musicKeyWorld = mainInput.value;
   addMusicList(e, musicKeyWorld);
@@ -45,7 +48,6 @@ function addMusicList(e, musicKeyWorld) {
       serachArea.style.display = "none"; // 검색창을 가려준다
 
       let musicList = response["results"]["trackmatches"]["track"];
-      pageNation(musicList); // 페이지 수 판단
 
       // 검색결과가 없을때
       if (musicList.length == 0) {
@@ -62,7 +64,7 @@ function addMusicList(e, musicKeyWorld) {
 
 
       let count = 1;
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < musicList.length; i++) {
         let albumTitle = musicList[i]["name"];
         let albumURL = musicList[i]["url"];
         let albumLikes = musicList[i]["listeners"];
@@ -73,7 +75,7 @@ function addMusicList(e, musicKeyWorld) {
               <span class="number">${i + 1}.</span>
               <a class="musicName" target="_blank" href="${albumURL}"><span class="albumTitle">${albumTitle}</span></a>
           </div>
-          <span class="likers"><span class="like">${albumLikes}</span> ❤</span>
+          <span class="likers"><span class="like">${albumLikes}</span> ❤
         </li>
         `);
 
@@ -109,23 +111,60 @@ function artistInformaition(musicKeyWorld) {
 }
 
 
-// 페이지 네이션
+// 아티스트 차트
+function chartTopArtist() {
+  $.ajax({
+    type: 'GET',
+    url: 'http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=502aca31cb330e8135b04d480caf6a56&format=json'
+  })
+    .done(function (response) {
+      for (let i = 0; i < 10; i++) {
+        let artist = response["artists"]["artist"];
 
-function pageNation(musicList) {
-  const pageNation = document.querySelector(".pagination"); // pagenation
-  totalMusic = musicList.length;
+        let topArtistRank = artist[i]["name"];
+        let artistURL = artist[i]["url"];
+        let listeners = artist[i]["listeners"];
+        $(".artist_chart").append(`
+        <li class="chartList">
+            <div class="artistCharNumber">
+              <span class="chart_number">${i+1}</span>
+              <a href="${artistURL}" target="_blank" class="artistName">${topArtistRank}</a>
+            </div>
+            <div class="LikersArea">
+            <span class="artistLikers">${listeners}</span> ❤
+          </div>
+        </li>
+        `);
+      }
 
-  if(totalMusic <= 10) { // 총 음악의 수가 10개를 안넘으면 숨기기
-    pageNation.style.display = "none";
-  }
-  
-  let totalPage = Math.ceil(totalMusic / 10); // 몇페이지를 출력해야하는지
-  
-  for (i = 1; i <= totalPage; i++) {
-    $(".pages").append(`
-    <a href="#">${i}</a>
-    `)
-  }
+    });
 }
 
+function chartTopTrack() {
+  $.ajax({
+    type: 'GET',
+    url: 'http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=502aca31cb330e8135b04d480caf6a56&format=json'
+  })
+    .done(function (response) {
+      for (let i = 0; i < 10; i++) {
+        let track = response["tracks"]["track"];
+        let trackTitle = track[i]["name"];
+        let trackTitleURL = track[i]["url"];
 
+        let artistName = track[i]["artist"]["name"];
+        let artistURL = track[i]["artist"]["url"];
+        $(".track_chart").append(`
+        <li class="chartList">
+          <div class="trackCharNumber">
+              <span class="chart_number">${i + 1}</span>
+              <a href="${trackTitleURL}" target="_blank" class="trackTitle">${trackTitle}</a>
+            </div>
+            <div class="informationArea">
+            <a href="${artistURL}" target="_blank" class="artist_name">${artistName}</a>
+          </div>
+        </li>
+        `)
+      }
+
+    });
+}

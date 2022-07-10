@@ -1,0 +1,60 @@
+.front__content {
+    display: flex;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 600px;
+    width: 1100px;
+    top: 50px;
+    box-shadow: 0.3px 0.3px 0.3px -1px;
+    margin-bottom: 40px;
+}
+
+/* 아티스트 차트 순위 */
+
+.artist_chart,
+.track_chart {
+    margin: 10px;
+    border: 3px solid #3590f3;
+    border-radius: 16px;
+    width: 50%;
+    height: 95%;
+    padding: 8px;
+}
+
+.artist_chart li,
+.track_chart li {
+    list-style: none;
+    border: 1px solid black;
+}
+
+.chartList {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.artistCharNumber,
+.trackCharNumber {
+    display: flex;
+}
+
+.artistName,
+.trackTitle {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.artist_name {
+    text-decoration: none !important;
+    color: black;
+}
+
+.artisTopTitle, 
+.trackTopTitle {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

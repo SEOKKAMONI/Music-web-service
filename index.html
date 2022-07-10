@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/result.css">
     <link rel="stylesheet" href="./style/searchError.css">
-    <link rel="stylesheet" href="./style/pagenation.css">
+    <link rel="stylesheet" href="./style/chart.css">
 </head>
 
 <body>
@@ -50,38 +50,18 @@
             <!-- 처음 시작 페이지 -->
             <div class="main_pg">
                 <div class="front__content">
-                    <ul class="front_chart">
-                        <li class="chartList">
-                            <div class="charNumberTitle">
-                                <span class="chart_number">1.</span>
-                                <span class="musicTitleChart">좋은날</span>
-                            </div>
-                            <div class="chartArtistArea">
-                                <span class="chartArtist">아이유</span>
-                            </div>
-                        </li>
-                        <li class="chartList">
-                            <div class="charNumberTitle">
-                                <span class="chart_number">1.</span>
-                                <span class="musicTitleChart">좋은날</span>
-                            </div>
-                            <div class="chartArtistArea">
-                                <span class="chartArtist">아이유</span>
-                            </div>
-                        </li>
-                        <li class="chartList">
-                            <div class="charNumberTitle">
-                                <span class="chart_number">1.</span>
-                                <span class="musicTitleChart">좋은날</span>
-                            </div>
-                            <div class="chartArtistArea">
-                                <span class="chartArtist">아이유</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="front_sub_content">
 
+                    <!-- 아티스트 차트 -->
+                    <ul class="artist_chart">
+                        <div class="artisTopTitle">Artist Chart TOP 10</div>
+                        
+                    </ul>
+
+                    <!-- 노래 차트 -->
+                    <ul class="track_chart">
+                        <div class="trackTopTitle">Track Chart TOP 10</div>
+
+                    </ul>
                 </div>
             </div>
 
@@ -118,14 +98,6 @@
                     <ul class="musicList">
                     </ul>
                 </div>
-                <!-- 페이지 네이션 부분 -->
-                <ul class="pagination">
-                    <a class="beforeBtn" onclick="" href="#">이전</a>
-                    <span class="pages">
-                        
-                    </span>
-                    <a class="nextBtn" onclick="" href="#">다음</a>
-                </ul>
             </div>
 
             <!-- 검색결과가 없을때 -->
