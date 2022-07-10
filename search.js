@@ -44,6 +44,9 @@ function addMusicList(e, musicKeyWorld) {
   })
     .done(function (response) {
       artistInformaition(musicKeyWorld);
+      similarArtist(musicKeyWorld);
+
+
       mainPg.style.display = "none"; // 검색이 되면 메인페이지를 가리고
       serachArea.style.display = "none"; // 검색창을 가려준다
 
@@ -75,10 +78,36 @@ function addMusicList(e, musicKeyWorld) {
               <span class="number">${i + 1}.</span>
               <a class="musicName" target="_blank" href="${albumURL}"><span class="albumTitle">${albumTitle}</span></a>
           </div>
-          <span class="likers"><span class="like">${albumLikes}</span> ❤
+          <span class="likers"><span class="like">${albumLikes}</span><span class="heart">❤</span>
         </li>
         `);
 
+
+      }
+    });
+}
+
+// 비슷한 아티스트
+function similarArtist(musicKeyWorld) {
+  $.ajax({
+    type: 'GET',
+    url: `http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${musicKeyWorld}&api_key=502aca31cb330e8135b04d480caf6a56&format=json`
+  })
+    .done(function (response) {
+      let similarArtists = response["similarartists"]["artist"];
+
+      for (let i = 0; i < 3; i++) {
+        let similarArtistName = similarArtists[i]["name"];
+        let similarArtistURL = similarArtists[i]["url"];
+        if (i == 2) { // 마지막은 "," 안나오게 하기 !
+          $(".similar_artist").append(`
+        <a class="similarArtist" href="${similarArtistURL}">${similarArtistName}</a>
+        `)
+        } else {
+          $(".similar_artist").append(`
+        <a class="similarArtist" href="${similarArtistURL}">${similarArtistName},</a>
+        `)
+        }
 
       }
     });
@@ -88,7 +117,7 @@ function addMusicList(e, musicKeyWorld) {
 // 아티스트 정보
 // http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=아이유&api_key=502aca31cb330e8135b04d480caf6a56&format=json
 
-const artistName = document.querySelector(".artist_name"); // 이름부분
+const artistName = document.querySelector(".artistNaming"); // 이름부분
 const artistDate = document.querySelector(".date"); // 생년월일 부분
 const artistPublished = document.querySelector(".published"); // 데뷔 날짜
 const detailArea = document.getElementById("datail_area"); // 자세히보기 버튼 넣어줄 구역
@@ -127,11 +156,11 @@ function chartTopArtist() {
         $(".artist_chart").append(`
         <li class="chartList">
             <div class="artistCharNumber">
-              <span class="chart_number">${i+1}</span>
+              <span class="chart_number">${i + 1}.</span>
               <a href="${artistURL}" target="_blank" class="artistName">${topArtistRank}</a>
             </div>
             <div class="LikersArea">
-            <span class="artistLikers">${listeners}</span> ❤
+            <span class="artistLikers">${listeners}</span><span class="heart">❤</span>
           </div>
         </li>
         `);
@@ -156,7 +185,7 @@ function chartTopTrack() {
         $(".track_chart").append(`
         <li class="chartList">
           <div class="trackCharNumber">
-              <span class="chart_number">${i + 1}</span>
+              <span class="chart_number">${i + 1}.</span>
               <a href="${trackTitleURL}" target="_blank" class="trackTitle">${trackTitle}</a>
             </div>
             <div class="informationArea">

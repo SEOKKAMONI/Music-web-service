@@ -1,7 +1,8 @@
 .header__line {
     height: 3vh;
     max-width: 100%;
-    background-color: #2667ff;
+    background-color: #00a6fb;
+    border-bottom: 5px solid black;
 }
 
 .header_sub_line {
@@ -9,15 +10,15 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    border-bottom: 2px solid black;
+    border-bottom: 5px solid black;
     margin-bottom: 30px;
     max-width: 100%;
+    background-color: #fff;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     text-decoration: none;
     color: black;
 }
-
