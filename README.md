@@ -20,7 +20,7 @@
 <img src="https://media.discordapp.net/attachments/994402201768300587/995682793155727430/unknown.png?width=825&height=409"?width=1359&height=670">
 <hr>
 <h3>💙 구현 계획 💙</h3>
-<h2>1. last.fm API를 사용하여 검색시 아티스트 정보와 앨범, 노래 따오기 <span style="font-weight: bold;">(일정 부분 완료)</span></h2>
+<h2>1. last.fm API를 사용하여 검색시 아티스트 정보와 앨범, 노래 따오기 <span style="font-weight: bold;">(완료)</span></h2>
 <h3> 🔴 문제점: last.fm API에서 아티스트에 이미지와 앨범 커버 이미지를 규정위반에 의해 지원을 안함<br>
      🟢 방안: 외국계 API인 MusicBrainz API를 사용하여 앨범 커버 이미지와 아티스트에 이미지를 가지고 오기</h3>
 <h2>2. 가사를 쳐도 그에 대한 노래가 나오게 하기</h2>
