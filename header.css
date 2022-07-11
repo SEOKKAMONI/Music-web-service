@@ -1,0 +1,25 @@
+.header__line {
+    height: 3vh;
+    background-color: #00a6fb;
+    border-bottom: 5px solid black;
+    min-width: 100vh;
+    padding: 20px;
+}
+
+.header_sub_line {
+    justify-content:space-around;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 5px solid black;
+    margin-bottom: 30px;
+    min-width: 100vh;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
