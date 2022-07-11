@@ -1,8 +1,9 @@
 .header__line {
     height: 3vh;
-    max-width: 100%;
     background-color: #00a6fb;
     border-bottom: 5px solid black;
+    min-width: 100vh;
+    padding: 20px;
 }
 
 .header_sub_line {
@@ -12,7 +13,7 @@
     padding: 20px;
     border-bottom: 5px solid black;
     margin-bottom: 30px;
-    max-width: 100%;
+    min-width: 100vh;
     background-color: #fff;
 }
 

@@ -29,6 +29,6 @@ body {
 
 @media (max-width: 1000px) {
     body {
-        width: 1000px;
+        min-width: 1000px;
     }
 }

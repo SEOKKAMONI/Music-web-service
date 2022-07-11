@@ -1,3 +1,7 @@
+.search {
+    min-width: 100vh;
+}
+
 #__form {
     background-color: #fff;
     border: 5px solid black;
