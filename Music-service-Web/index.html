@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>SIMSIMHYE</title>
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/search.css">
+    <link rel="stylesheet" href="./style/sub_search.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/result.css">
+    <link rel="stylesheet" href="./style/searchError.css">
+    <link rel="stylesheet" href="./style/chart.css">    
+</head>
+
+<body>
+    <div class="container">
+        <!-- 헤더 부분 -->
+        <div class="header__line"></div>
+        <div class="header_sub_line">
+            <a href="#" class="logo" onclick="window.location.reload()"><i class="fa-solid fa-cup-straw drink"></i>PaPaYa</a>
+            <div>
+                <!-- 서브 검색창 -->
+                <form id="sub__form">
+                    <input type="input" id="sub__input" name="q" placeholder="아티스트 및 앨범을 검색하세요."
+                        aria-label="Search through site content">
+                    <button type="button" id="sub_search__btn"><svg class="search__emoji" viewBox="0 0 1024 1024">
+                            <path class="path1"
+                                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+                            </path>
+                        </svg></button>
+                </form>
+            </div>
+        </div>
+        <div class="search">
+            <!-- 메인 검색창 -->
+            <form id="__form">
+                <input type="input" id="__input" name="q" placeholder="아티스트 및 앨범을 검색하세요."
+                    aria-label="Search through site content">
+                <button type="button" id="search__btn"><svg class="search__emoji" viewBox="0 0 1024 1024">
+                        <path class="path1"
+                            d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+                        </path>
+                    </svg></button>
+            </form>
+        </div>
+        <div class="main">
+
+            <!-- 처음 시작 페이지 -->
+            <div class="main_pg">
+                <div class="front__content">
+
+                    <!-- 아티스트 차트 -->
+                    <ul class="artist_chart">
+                        <div class="artisTopTitle">Artist Chart TOP 10</div>
+                        
+                    </ul>
+
+                    <!-- 노래 차트 -->
+                    <ul class="track_chart">
+                        <div class="trackTopTitle">Track Chart TOP 10</div>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 검색 결과 페이지 -->
+            <div id="result_page">
+                <div class="result_content">
+                    <div class="__artist">
+                        <div class="artist_cover">
+                            <img class="artist_img" src="https://t1.daumcdn.net/cfile/tistory/243FE450575F82662D">
+                        </div>
+
+                      
+
+                        <!-- 검색시 아티스트 정보 -->
+                        <div class="artist_information">
+                            <h1 class="artistNaming">
+                                <!-- 이름 부분 -->
+                            </h1>
+                            <ul class="artist_items">
+                                <li>
+                                    <span>데뷔날짜: </span>
+                                    <span class="published">
+                                        <!-- 데뷔 날짜 부분 -->
+                                    </span>
+                                </li>
+                                <li class="similar_artist">
+                                    <span>비슷한 아티스트: </span>
+                                    <a class="similarArtist_one" href="#"></a>
+                                    <a class="similarArtist_two" href="#"></a>
+                                    <a class="similarArtist_three" href="#"></a>
+                                </li>
+                                <li id="detail_area">
+                                    <a href="#" target="_blank" class="more_btn">자세히 보기</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 검색시 뮤직 리스트 생성 -->
+                <div class="musicContent">
+                    <ul class="musicList">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 검색결과가 없을때 -->
+            <div class="errorArea">
+                <div id="searchErrorPg">
+                    <h2>"<span class="searchResult"></span>" 에 대한 검색 결과가 없습니다.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="./app/search.js"></script>
+</body>
+
+</html>

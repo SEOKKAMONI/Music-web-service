@@ -1,0 +1,38 @@
+#sub__form {
+    background-color: #fff;
+    border-bottom: 2.5px solid black;
+    width: 280px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#sub__input {
+    all: unset;
+    font: 13px system-ui;
+    color: #aaaaaa;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+}
+
+::placeholder {
+    color: #aaaaaa;
+    opacity: 0.7;
+}
+
+.search__emoji {
+    color: #000;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+}
+
+#sub_search__btn {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}

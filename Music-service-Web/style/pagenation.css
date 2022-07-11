@@ -1,0 +1,31 @@
+.pagination {
+    margin: 0 0 10px;
+    min-height: 25px;
+    text-align: center;
+    position: relative;
+    font-size: 0;
+}
+
+.pages a, 
+.beforeBtn, 
+.nextBtn {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 4px;
+    text-decoration: none;
+    color: #666;
+    font: normal 12px/26px Tahoma, Helvetica, sans-serif;
+}
+
+.pages a:focus,
+.pages a:active {
+    color: #3590f3;
+    border: 1px solid #3590f3;
+}

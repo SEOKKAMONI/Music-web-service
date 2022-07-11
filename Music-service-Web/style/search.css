@@ -1,0 +1,47 @@
+.search {
+    min-width: 100vh;
+}
+
+#__form {
+    background-color: #fff;
+    border: 5px solid black;
+    max-width: 600px;
+    height: 50px;
+    border-radius: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+    margin: 0 auto;
+    top: 50px;
+}
+
+#__input {
+    all: unset;
+    font: 16px system-ui;
+    color: #aaaaaa;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+}
+
+::placeholder {
+    color: #aaaaaa;
+    opacity: 0.7;
+}
+
+.search__emoji {
+    color: #000;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+}
+
+#search__btn {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
