@@ -1,6 +1,7 @@
 <h1>Music-service-Web 현재 구현안 설명</h1>
 <h2>🚨 여기 있는 모든것은 언제든지 바뀔수도있습니다 🚨<br><br>
 🚨 최종 완성본이 만들어지면 다시 정리해서 올리겠습니다 🚨</h2>
+<h2>베타: https://amazing-jalebi-b73af4.netlify.app</h2>
 <h3>사용 API</h3>
 <h4>last.fm API : https://www.last.fm/api<br>
     MusicBrainz API : https://musicbrainz.org/doc/MusicBrainz_API<br>
