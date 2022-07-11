@@ -16,7 +16,7 @@
     border-radius: 10px;
     margin: 0 auto;
     height: 225px;
-    max-width: 922px;
+    max-width: 900px;
     height: 100%;
     background-color: #f8f7ff;
     top: 50px;
@@ -135,7 +135,13 @@
 
 /* 비슷한 아티스트 */
 
-.similarArtist {
+.similar_artist {
+    width: 800px;
+}
+
+.similarArtist_one,
+.similarArtist_two,
+.similarArtist_three {
     text-decoration: none;
     color: black;
     font-weight: bold;
