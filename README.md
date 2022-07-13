@@ -3,9 +3,7 @@
 🚨 최종 완성본이 만들어지면 다시 정리해서 올리겠습니다 🚨</h2>
 <h2>베타: https://zingy-sorbet-8fc26e.netlify.app/</h2>
 <h3>사용 API</h3>
-<h4>last.fm API : https://www.last.fm/api<br>
-    MusicBrainz API : https://musicbrainz.org/doc/MusicBrainz_API<br>
-    Genius API : https://genius.com/developers</h4>
+<h4>last.fm API : https://www.last.fm/api<br></h4>
 <hr>
 <h3>💙 수정전 레이아웃 💙</h3>
 <img src="https://media.discordapp.net/attachments/994402201768300587/994429963421880370/unknown.png?width=829&height=409">
@@ -20,11 +18,13 @@
 <h3>💙 검색시 결과 💙 (수정 07.10)</h3>
 <img src="https://media.discordapp.net/attachments/994402201768300587/995682793155727430/unknown.png?width=825&height=409"?width=1359&height=670">
 <hr>
-<h3>💙 구현 계획 💙</h3>
-<h2>1. last.fm API를 사용하여 검색시 아티스트 정보와 앨범, 노래 따오기 <span style="font-weight: bold;">(완료)</span></h2>
-<h3> 🔴 문제점: last.fm API에서 아티스트에 이미지와 앨범 커버 이미지를 규정위반에 의해 지원을 안함<br>
-     🟢 방안: 외국계 API인 MusicBrainz API를 사용하여 앨범 커버 이미지와 아티스트에 이미지를 가지고 오기</h3>
-<h2>2. 가사를 쳐도 그에 대한 노래가 나오게 하기</h2>
-<h3>🟢 방안: Genius API를 이용하여 구현 가능</h3>
-
+<h3>💙 프로젝트 하면서 느낀점 정리 💙</h3>
+<h4>
+    첫 프로젝트다 보니 내가 계획한것들 중에 틀어진것들이 많았다<br>
+    처음에는 방대하게 계획을 짜보았지만 그중간에서도 저작권 관련 떄문에 아티스트 이미지, 앨범 커버 이미지를 API 에서 제공하지 않다거나 <br>
+    내가 구현이 정말 쉽게 될것만 같았던 기능들이 속도가 느리거나 내가 원하는 데이터들이 없는 문제가 발생하였었다 하지만<br>
+    이 문제들을 해결해 나가는 과정을 통해 구글링을 빠르게 하여 원하는 답을 찾을수있게 되었고 속도를 개선해 나가는 측면에서<br>
+    좀 더 속도가 빠르게 코드를 짤수있는법등을 알고 CSS 각종 오류등을 수정하는 과정에서 다른 사이트를 f12를 눌러 참고 해본다는 등등<br>
+    여러 많은것들을 얻어가는 프로젝트 같다
+</h4>
 
