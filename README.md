@@ -21,3 +21,4 @@
 <h2>1. last.fm API를 사용하여 검색시 아티스트 정보와 앨범, 노래 따오기 <span style="font-weight: bold;">(완료)</span></h2>
 <h2>2. last.fm API를 사용하여 메인에 아티스트와 트랙 차트 띄우기 <span style="font-weight: bold;">(완료)</span></h2>
 <h2>3. last.fm API를 사용하여 검색시 아티스트와 비슷한 아티스트 3명 띄우기 <span style="font-weight: bold;">(완료)</span></h2>
+ㅎㅎ
