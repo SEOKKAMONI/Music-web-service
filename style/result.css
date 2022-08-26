@@ -139,7 +139,13 @@
     width: 800px;
 }
 
+<<<<<<< HEAD
 .similarArtist {
+=======
+.similarArtist_one,
+.similarArtist_two,
+.similarArtist_three {
+>>>>>>> c2ae623 (최종 결과물)
     text-decoration: none;
     color: black;
     font-weight: bold;
