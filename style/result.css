@@ -139,9 +139,7 @@
     width: 800px;
 }
 
-.similarArtist_one,
-.similarArtist_two,
-.similarArtist_three {
+.similarArtist {
     text-decoration: none;
     color: black;
     font-weight: bold;
