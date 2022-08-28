@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const mainInput = document.getElementById("__input"); // main input
 const mainForm = document.getElementById("__form"); // main form
 
