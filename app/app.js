@@ -196,7 +196,7 @@ function chartTopTrack() {
       }
 
     });
-=======
+
 const mainInput = document.getElementById("__input"); // main input
 const mainForm = document.getElementById("__form"); // main form
 
@@ -395,5 +395,4 @@ function chartTopTrack() {
       }
 
     });
->>>>>>> 18056eebe8c9faf9d33a4ab165dec349f4ca6c5f
 }
